@@ -26,6 +26,9 @@ public class LoginForm extends BaseForm {
         textboxUserName.setToolTipText(_textForm.toolTipUserText);
         textboxUserPass.setToolTipText(_textForm.toolTipPassText);
         labelLoginImage.setToolTipText(_textForm.toolTipLabelImage);
+        
+        // Paint
+        _function.paint_images(labelLoginImage, "src/images/logo.jpg");
     }
 
     @SuppressWarnings("unchecked")
@@ -60,7 +63,8 @@ public class LoginForm extends BaseForm {
         labelTitleForm.setText("TitleForm");
 
         labelLoginImage.setBackground(new java.awt.Color(0, 102, 102));
-        labelLoginImage.setText("jLabel1");
+        labelLoginImage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        labelLoginImage.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,8 +87,8 @@ public class LoginForm extends BaseForm {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(textboxUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(textboxUserPass, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                .addComponent(labelLoginImage, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelLoginImage, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -107,16 +111,18 @@ public class LoginForm extends BaseForm {
                             .addComponent(buttonOk)
                             .addComponent(buttonCancel)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(labelLoginImage, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(labelLoginImage, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
+
+        labelLoginImage.getAccessibleContext().setAccessibleName("labelLogo");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOkActionPerformed
-
+        
     }//GEN-LAST:event_buttonOkActionPerformed
 
     /**

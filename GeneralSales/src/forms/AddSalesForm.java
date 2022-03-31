@@ -1,26 +1,17 @@
-// @author Garcia-Jhon-Lucas on 09/feb/2022
-package components;
+// @author Garcia-Jhon-Lucas on 31/Mar/2022
+package forms;
 
-import helpers.FormWords;
-import helpers.Functions;
-import java.awt.Color;
+import components.BaseInternalForm;
 
-public class BaseInternalForm extends javax.swing.JInternalFrame {
+public class AddSalesForm extends BaseInternalForm {
 
-    public static String _titleForm = "General Sales | ";
-    public static FormWords _textForm = new FormWords();
-    public static Functions _function = new Functions();
-
-    public BaseInternalForm() {
+    public AddSalesForm() {
         initComponents();
-        this.getContentPane().setBackground(Color.white);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
-        setClosable(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

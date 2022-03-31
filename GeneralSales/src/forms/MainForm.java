@@ -18,8 +18,14 @@ public class MainForm extends BaseForm {
         this.setSize(screenSize.width, screenSize.height);
         this.setLocationRelativeTo(this);
         this.setVisible(true);
+
         // Menu Items
         this.menuItemFile.setText(_textForm.menuItemFileText);
+        this.menuItemAddProduct.setText(_textForm.menuItemAddProductText);
+        this.menuItemAddCant.setText(_textForm.menuItemAddCantText);
+        this.menuItemAddSales.setText(_textForm.menuItemSalesText);
+        this.menuProducts.setText(_textForm.menuProductsText);
+        this.menuSales.setText(_textForm.menuSalesText);
     }
 
     @SuppressWarnings("unchecked")
@@ -30,7 +36,11 @@ public class MainForm extends BaseForm {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         menuItemFile = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        menuProducts = new javax.swing.JMenu();
+        menuItemAddProduct = new javax.swing.JMenuItem();
+        menuItemAddCant = new javax.swing.JMenuItem();
+        menuSales = new javax.swing.JMenu();
+        menuItemAddSales = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,8 +67,37 @@ public class MainForm extends BaseForm {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        menuProducts.setText("Products");
+
+        menuItemAddProduct.setText("Add Products");
+        menuItemAddProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemAddProductActionPerformed(evt);
+            }
+        });
+        menuProducts.add(menuItemAddProduct);
+
+        menuItemAddCant.setText("Add Cant");
+        menuItemAddCant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemAddCantActionPerformed(evt);
+            }
+        });
+        menuProducts.add(menuItemAddCant);
+
+        jMenuBar1.add(menuProducts);
+
+        menuSales.setText("Sales");
+
+        menuItemAddSales.setText("Add Sales");
+        menuItemAddSales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemAddSalesActionPerformed(evt);
+            }
+        });
+        menuSales.add(menuItemAddSales);
+
+        jMenuBar1.add(menuSales);
 
         setJMenuBar(jMenuBar1);
 
@@ -77,9 +116,24 @@ public class MainForm extends BaseForm {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuItemFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemFileActionPerformed
-        AboutForm _about = new AboutForm();
-        _function.addCentered(_about, desktopPanel);
+        AboutForm _form = new AboutForm();
+        _function.addCentered(_form, desktopPanel);
     }//GEN-LAST:event_menuItemFileActionPerformed
+
+    private void menuItemAddProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemAddProductActionPerformed
+        ProductsForm _form = new ProductsForm();
+        _function.addCentered(_form, desktopPanel);
+    }//GEN-LAST:event_menuItemAddProductActionPerformed
+
+    private void menuItemAddCantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemAddCantActionPerformed
+        AddCantForm _form = new AddCantForm();
+        _function.addCentered(_form, desktopPanel);
+    }//GEN-LAST:event_menuItemAddCantActionPerformed
+
+    private void menuItemAddSalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemAddSalesActionPerformed
+        AddSalesForm _form = new AddSalesForm();
+        _function.addCentered(_form, desktopPanel);
+    }//GEN-LAST:event_menuItemAddSalesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,8 +174,12 @@ public class MainForm extends BaseForm {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane desktopPanel;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem menuItemAddCant;
+    private javax.swing.JMenuItem menuItemAddProduct;
+    private javax.swing.JMenuItem menuItemAddSales;
     private javax.swing.JMenuItem menuItemFile;
+    private javax.swing.JMenu menuProducts;
+    private javax.swing.JMenu menuSales;
     // End of variables declaration//GEN-END:variables
 }

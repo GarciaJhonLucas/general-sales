@@ -1,5 +1,4 @@
 // @author Garcia-Jhon-Lucas on 09/feb/2022
-
 package forms;
 
 import components.BaseInternalForm;
@@ -24,6 +23,9 @@ public class AboutForm extends BaseInternalForm {
         labelAboutStatus3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         labelAboutStatus4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("General Sales");
@@ -36,9 +38,9 @@ public class AboutForm extends BaseInternalForm {
         labelAboutStatus.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelAboutStatus.setText("Estado:");
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("Development");
 
-        jLabel4.setText("jLabel3");
+        jLabel4.setText("1.0.0");
 
         labelAboutStatus2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelAboutStatus2.setText("Realease");
@@ -51,6 +53,12 @@ public class AboutForm extends BaseInternalForm {
         labelAboutStatus4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelAboutStatus4.setText("Desarrollador");
 
+        jLabel5.setText("None");
+
+        jLabel6.setText("Alfa");
+
+        jLabel7.setText("Garcia Jhon Lucas");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -60,11 +68,9 @@ public class AboutForm extends BaseInternalForm {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jLabel1)
                             .addComponent(labelAboutStatus2))
-                        .addGap(82, 82, 82)
+                        .addGap(56, 56, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
@@ -76,12 +82,18 @@ public class AboutForm extends BaseInternalForm {
                             .addComponent(labelAboutStatus3))
                         .addGap(151, 151, 151))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelAboutStatus4)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelAboutStatus)
-                                .addGap(45, 45, 45)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(labelAboutStatus4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(labelAboutStatus)
+                                    .addGap(45, 45, 45)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -99,19 +111,25 @@ public class AboutForm extends BaseInternalForm {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelAboutVersion)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelAboutStatus)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(labelAboutStatus2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(labelAboutStatus3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(labelAboutStatus4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelAboutStatus2)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelAboutStatus3)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelAboutStatus4)
+                    .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
@@ -124,6 +142,9 @@ public class AboutForm extends BaseInternalForm {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel labelAboutStatus;
     private javax.swing.JLabel labelAboutStatus2;
     private javax.swing.JLabel labelAboutStatus3;
