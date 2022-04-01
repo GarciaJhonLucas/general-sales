@@ -8,16 +8,16 @@ public class Messages {
 
     public static String generalTitle = "General Sales";
 
-    public static void okMessage(Optional<String> titleMessage, String textMessage) {
-        JOptionPane.showInternalMessageDialog(null, (titleMessage.isEmpty()) ? generalTitle : titleMessage, textMessage, JOptionPane.INFORMATION_MESSAGE);
+    public static void okMessage(String titleMessage, String textMessage) {
+        JOptionPane.showInternalMessageDialog(null, textMessage, titleMessage, JOptionPane.INFORMATION_MESSAGE);
     }
 
-    public static void errorMessage(Optional<String> titleMessage, String textMessage) {
-        JOptionPane.showInternalMessageDialog(null, (titleMessage.isEmpty()) ? generalTitle : titleMessage, textMessage, JOptionPane.ERROR_MESSAGE);
+    public static void errorMessage(String titleMessage, String textMessage) {
+        JOptionPane.showInternalMessageDialog(null, textMessage, titleMessage, JOptionPane.ERROR_MESSAGE);
     }
 
-    public static void alertMessage(Optional<String> titleMessage, String textMessage) {
-        JOptionPane.showInternalMessageDialog(null, (titleMessage.isEmpty()) ? generalTitle : titleMessage, textMessage, JOptionPane.WARNING_MESSAGE);
+    public static void alertMessage(String titleMessage, String textMessage) {
+        JOptionPane.showInternalMessageDialog(null, textMessage, titleMessage, JOptionPane.WARNING_MESSAGE);
     }
 
     public static void yesNoOption(Optional<String> titleMessage, String textMessage) {

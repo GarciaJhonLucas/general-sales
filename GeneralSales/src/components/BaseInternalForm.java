@@ -3,6 +3,7 @@ package components;
 
 import helpers.FormWords;
 import helpers.Functions;
+import helpers.Messages;
 import java.awt.Color;
 
 public class BaseInternalForm extends javax.swing.JInternalFrame {
@@ -10,6 +11,7 @@ public class BaseInternalForm extends javax.swing.JInternalFrame {
     public static String _titleForm = "General Sales | ";
     public static FormWords _textForm = new FormWords();
     public static Functions _function = new Functions();
+    public static Messages _messages = new Messages();
 
     public BaseInternalForm() {
         initComponents();

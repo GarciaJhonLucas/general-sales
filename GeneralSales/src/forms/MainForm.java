@@ -126,7 +126,7 @@ public class MainForm extends BaseForm {
     }//GEN-LAST:event_menuItemAddProductActionPerformed
 
     private void menuItemAddCantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemAddCantActionPerformed
-        AddCantForm _form = new AddCantForm();
+        AddCantProductsForm _form = new AddCantProductsForm();
         _function.addCentered(_form, desktopPanel);
     }//GEN-LAST:event_menuItemAddCantActionPerformed
 
