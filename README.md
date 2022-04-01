@@ -2,11 +2,11 @@
 
 _Small application, for the registration of products and their respective sale, in addition to an impression of ticked of purchase on the part of the client._
 
-## Comenzando 🚀
+## Start 🚀
 
 _These instructions will allow you to get a copy of the project running on your local machine for development and testing purposes._
 
-### Pre-requisitos 📋
+### Pre-requirements 📋
 
 _Download what you need in the built with_
 
@@ -15,7 +15,7 @@ Clone the project
 git clone https://github.com/GarciaJhonLucas/general-sales.git
 ```
 
-### Instalación 🔧
+### Installation 🔧
 
 * Open the project in your IDE 
 * Restore the database in MySQL

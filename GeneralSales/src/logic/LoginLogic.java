@@ -2,6 +2,7 @@
 package logic;
 
 import dto.ConnectionDto;
+import helpers.Messages;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.Connection;
@@ -26,10 +27,7 @@ public class LoginLogic {
         tableModel = new DefaultTableModel(null, titulos);
 
         SQL = "Select * from users where user='" + user + "' and pass='" + pass + "'";
-        //SQL = "{CALL getLogin()}";
         try {
-            //CallableStatement cs = (CallableStatement) mysql.Connection().prepareCall(SQL);
-            //ResultSet rs = cs.executeQuery();
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(SQL);
             while (rs.next()) {
@@ -42,8 +40,7 @@ public class LoginLogic {
             return tableModel;
 
         } catch (SQLException e) {
-
-            JOptionPane.showConfirmDialog(null, e);
+            Messages.alertMessage("LOGIN CONECCTION", e.getMessage());
             return null;
         }
 

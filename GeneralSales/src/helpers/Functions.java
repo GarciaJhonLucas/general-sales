@@ -17,14 +17,14 @@ import javax.swing.JLabel;
 import javax.swing.JTable;
 
 public class Functions {
-
+    
     String pass = "123456789";
 
     // Search DataBase / If he dont have create automaticamente
     public void searchDataBase() {
-
+        
     }
-
+    
     public String encriptId(String id) {
         String sourceString = id;
         char[] p = pass.toCharArray();
@@ -37,7 +37,7 @@ public class Functions {
         }
         return new String(c);
     }
-
+    
     public int dencriptId(String id) {
         char[] p = pass.toCharArray();
         int n = p.length;
@@ -49,14 +49,14 @@ public class Functions {
         }
         return Integer.parseInt(Arrays.toString(c));
     }
-
+    
     public String conseguirMAC() {
         StringBuilder sb = new StringBuilder();
         NetworkInterface a;
         try {
             a = NetworkInterface.getByInetAddress(InetAddress.getLocalHost());
             byte[] mac = a.getHardwareAddress();
-
+            
             for (int i = 0; i < mac.length; i++) {
                 sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));
             }
@@ -65,39 +65,40 @@ public class Functions {
         }
         return "" + sb.toString();
     }
-
+    
     private static void printErrors(String error) {
         System.err.println("============== ERROR ==============");
         System.err.println(error);
         System.err.println("===================================");
     }
-
+    
     public static void printInfoMessages(String info) {
         System.out.println("============== INFO ==============");
         System.out.println(info);
     }
-
-    public void addCentered(JInternalFrame jif, JDesktopPane desktop) {
+    
+    public void addCentered(JInternalFrame jif, JDesktopPane desktop, boolean visible) {
         desktop.add(jif);
+        jif.toFront();
         jif.setLocation((desktop.getWidth() - jif.getWidth()) / 2, (desktop.getHeight() - jif.getHeight()) / 2);
-        jif.setVisible(true);
+        jif.setVisible(visible);
     }
-
+    
     public void paint_images(JLabel label, String route) {
-
+        
         ImageIcon image = new ImageIcon(route);
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_DEFAULT));
         label.setIcon(icon);
         label.repaint();
     }
-
+    
     public static String getMD5(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             byte[] messageDigest = md.digest(input.getBytes());
             BigInteger number = new BigInteger(1, messageDigest);
             String hashtext = number.toString(16);
-
+            
             while (hashtext.length() < 32) {
                 hashtext = "0" + hashtext;
             }
@@ -106,16 +107,17 @@ public class Functions {
             throw new RuntimeException(e);
         }
     }
-
+    
     public void hideColumns(JTable table) {
         table.getColumnModel().getColumn(0).setMaxWidth(0);
         table.getColumnModel().getColumn(0).setMinWidth(0);
         table.getColumnModel().getColumn(0).setPreferredWidth(0);
+        table.setFocusable(false);
         for (int i = 0; i < table.getRowCount(); i++) {
             for (int j = 0; j < table.getColumnCount(); j++) {
                 table.isCellEditable(i, j);
             }
         }
     }
-
+    
 }

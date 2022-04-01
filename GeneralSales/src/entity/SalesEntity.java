@@ -6,7 +6,7 @@ import java.util.Date;
 public class SalesEntity {
 
     public int id;
-    public Date date;
+    public String date;
     public double total;
     public boolean status;
 
@@ -18,11 +18,11 @@ public class SalesEntity {
         this.id = id;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

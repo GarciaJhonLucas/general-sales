@@ -117,22 +117,22 @@ public class MainForm extends BaseForm {
 
     private void menuItemFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemFileActionPerformed
         AboutForm _form = new AboutForm();
-        _function.addCentered(_form, desktopPanel);
+        _function.addCentered(_form, desktopPanel, true);
     }//GEN-LAST:event_menuItemFileActionPerformed
 
     private void menuItemAddProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemAddProductActionPerformed
         ProductsForm _form = new ProductsForm();
-        _function.addCentered(_form, desktopPanel);
+        _function.addCentered(_form, desktopPanel, true);
     }//GEN-LAST:event_menuItemAddProductActionPerformed
 
     private void menuItemAddCantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemAddCantActionPerformed
         AddCantProductsForm _form = new AddCantProductsForm();
-        _function.addCentered(_form, desktopPanel);
+        _function.addCentered(_form, desktopPanel, true);
     }//GEN-LAST:event_menuItemAddCantActionPerformed
 
     private void menuItemAddSalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemAddSalesActionPerformed
-        AddSalesForm _form = new AddSalesForm();
-        _function.addCentered(_form, desktopPanel);
+        SalesForm _form = new SalesForm();
+        _function.addCentered(_form, desktopPanel, true);
     }//GEN-LAST:event_menuItemAddSalesActionPerformed
 
     /**
@@ -172,7 +172,7 @@ public class MainForm extends BaseForm {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane desktopPanel;
+    public static javax.swing.JDesktopPane desktopPanel;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem menuItemAddCant;

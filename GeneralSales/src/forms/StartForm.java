@@ -96,14 +96,14 @@ public class StartForm extends BaseForm {
             }
         });
 
-        buttonOk.setText("jButton1");
+        buttonOk.setText("Button");
         buttonOk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonOkActionPerformed(evt);
             }
         });
 
-        buttonCancel.setText("jButton2");
+        buttonCancel.setText("Button");
         buttonCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCancelActionPerformed(evt);

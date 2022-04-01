@@ -28,21 +28,21 @@ public class FormWords {
     public String downloadTextButton = "Download";
     public String addTextButton = "Add";
     public String updateTextButton = "Update";
-
+    public String salesTextButton = "Make Sale";
+    public String listTextButton = "List Products";
+    
     // Labels Login Form
     public String labelTextUserName = "User:";
     public String labelTextUserPass = "Pass:";
     public String toolTipPassText = "Enter your password";
     public String toolTipUserText = "Enter your user";
     public String toolTipLabelImage = "No profile picture";
-    
+
     // Label Add Cant Products Form
-    
-    
     // MenuItem
     public String menuItemFileText = "Information";
     public String menuItemAddProductText = "Add Products";
-    public String menuItemAddCantText = "Add Cant";
+    public String menuItemAddCantText = "Add Cant Products";
     public String menuItemSalesText = "Add Sales";
     public String menuSalesText = "Sales";
     public String menuProductsText = "Products";

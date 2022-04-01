@@ -9,7 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class ProductsLogic {
@@ -50,7 +49,7 @@ public class ProductsLogic {
             return model;
 
         } catch (SQLException e) {
-            JOptionPane.showConfirmDialog(null, e);
+            Messages.errorMessage("SHOW PRODUCTS", e.getMessage());
             return null;
         }
     }
@@ -73,7 +72,7 @@ public class ProductsLogic {
             return (n != 0);
 
         } catch (SQLException e) {
-            Messages.errorMessage("INSERT PRODUCTS", e.toString());
+            Messages.errorMessage("INSERT PRODUCTS", e.getMessage());
             return false;
         }
     }
@@ -96,25 +95,26 @@ public class ProductsLogic {
             return (n != 0);
 
         } catch (SQLException e) {
-            Messages.errorMessage("UPDATE PRODUCTS", e.toString());
+            Messages.errorMessage("UPDATE PRODUCTS", e.getMessage());
             return false;
         }
     }
 
-    public boolean deleteProducts(ProductEntity _product) {
-        SQL = "DELETE products set status=? WHERE id=?";
+    public boolean addCantProducts(ProductEntity _product){
+        SQL = "UPDATE products set stock=? WHERE id=?";
 
         try {
             PreparedStatement pst = conn.prepareStatement(SQL);
-            pst.setBoolean(1, _product.isStatus());
+            pst.setInt(1, _product.getStock());
             pst.setInt(2, _product.getId());
 
             int n = pst.executeUpdate();
             return (n != 0);
 
         } catch (SQLException e) {
-            Messages.errorMessage("DELETE PRODUCTS", e.toString());
+            Messages.errorMessage("ADD CANT PRODUCTS", e.getMessage());
             return false;
         }
     }
+    
 }

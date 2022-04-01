@@ -1,4 +1,4 @@
-CREATE DATABASE simple - store;
+CREATE DATABASE `simple-store`;
 
 CREATE TABLE `simple-store`.`products` (
     `id` INT NOT NULL AUTO_INCREMENT,
@@ -30,13 +30,10 @@ CREATE TABLE `simple-store`.`sales` (
 ) ENGINE = InnoDB;
 
 CREATE TABLE `simple-store`.`sales_detail` (
-    `id` INT NOT NULL,
+    `id` INT NOT NULL AUTO_INCREMENT,
     `sales_id` INT NOT NULL,
     `product_id` INT NOT NULL,
     `cant` INT NOT NULL,
-    `total` DECIMAL(14, 2) NOT NULL
+    `total` DECIMAL(14, 2) NOT NULL,
+     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
-
-
--- INSERT USERS
-INSERT INTO `users` (`id`, `user`, `pass`, `status`) VALUES (NULL, 'admin', 'admin', '1');

@@ -5,6 +5,7 @@ import components.BaseInternalForm;
 import entity.ProductEntity;
 import helpers.Messages;
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import javax.swing.table.DefaultTableModel;
 import logic.ProductsLogic;
 
@@ -177,6 +178,11 @@ public class ProductsForm extends BaseInternalForm {
 
         textBoxDescription.setColumns(20);
         textBoxDescription.setRows(5);
+        textBoxDescription.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                textBoxDescriptionKeyPressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(textBoxDescription);
 
         checkBoxStatus.setSelected(true);
@@ -235,6 +241,7 @@ public class ProductsForm extends BaseInternalForm {
 
             }
         ));
+        tableProducts.setFocusable(false);
         tableProducts.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tableProductsMouseClicked(evt);
@@ -245,6 +252,12 @@ public class ProductsForm extends BaseInternalForm {
         labelTotalRecords.setText("Total");
 
         labelCode.setText("000000");
+
+        textBoxSearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                textBoxSearchKeyPressed(evt);
+            }
+        });
 
         buttonSearch.setText("Button");
         buttonSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -459,6 +472,18 @@ public class ProductsForm extends BaseInternalForm {
         String dato = tableProducts.getValueAt(tableRow, 8).toString();
         checkBoxStatus.setSelected(!Boolean.parseBoolean(dato));
     }//GEN-LAST:event_tableProductsMouseClicked
+
+    private void textBoxSearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textBoxSearchKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            showAllProducts(textBoxSearch.getText());
+        }
+    }//GEN-LAST:event_textBoxSearchKeyPressed
+
+    private void textBoxDescriptionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textBoxDescriptionKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_TAB) {
+            spinnerStock.requestFocus();
+        }
+    }//GEN-LAST:event_textBoxDescriptionKeyPressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancel;
